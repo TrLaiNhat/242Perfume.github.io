@@ -9,27 +9,46 @@
 <body>
     <header>
          <!-- Thanh điều hướng -->
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">242 Perfume</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="contact.php">Liên hệ</a></li>
-                    <li><a href="SignUp_LogIn_Form.html">Tài khoản</a></li>
-                    <li><a href="cart.html" class="cart" id="cart-icon">Giỏ hàng <span class="cart-count">0</span></a></li>
-                </ul>
-            </nav>
-            <!-- Thanh tìm kiếm -->
-            <div class="search-bar">  
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">242 Perfume</div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="contact.php">Liên hệ</a></li>
+                        <li><a href="SignUp_LogIn_Form.html">Tài khoản</a></li>
+                        <li>
+                            <a href="cart.html" class="cart" id="cart-icon">
+                                Giỏ hàng <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-toggle" id="userDropdown">
+                                <div class="avatar">
+                                    <img src="images/Lại Nhật Trường.jpg" alt="Admin">
+                                </div>
+                                <span class="username">Lại Nhật Trường</span>
+                                <div class="dropdown-icon"></div>
+                            </div>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <a href="#" class="dropdown-item">Tài Khoản Của Tôi</a>
+                                <a href="#" class="dropdown-item">Đơn Mua</a>
+                                <a href="dashboard.html" class="dropdown-item">Quản Lý</a>
+                                <a href="#" class="dropdown-item">Đăng Xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Thanh tìm kiếm -->
+                <div class="search-bar">  
                     <input type="text" name="query" class="search-input" placeholder="Tìm kiếm nước hoa...">
                     <button class="search-button">🔍 Tìm kiếm</button>
-              </div>
-            <!-- Kết quả tìm kiếm -->
-            <div id="search-results">
-               
+                </div>
+                
+                <!-- Kết quả tìm kiếm -->
+                <div id="search-results"></div>
             </div>
-        </div>
-    </header>
+        </header>
 
 <div class="container">
     <!-- Bộ lọc bên trái -->
@@ -737,10 +756,5 @@
     </footer>
     <div id="overlay" class="overlay"></div>
     <script src="script.js" defer></script>
-
-
-
-
 </body>
-
 </html>
