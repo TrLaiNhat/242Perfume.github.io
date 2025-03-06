@@ -412,3 +412,19 @@ function sendMessage() {
         chatInput.value = '';
     }
 };
+document.addEventListener('DOMContentLoaded', function() {
+    // Xử lý dropdown menu
+    const userDropdown = document.getElementById('userDropdown');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    
+    userDropdown.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('active');
+    });
+    
+    // Đóng dropdown khi nhấp ra ngoài
+    document.addEventListener('click', function(event) {
+        if (!userDropdown.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('active');
+        }
+    });
+});
