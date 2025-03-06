@@ -70,8 +70,9 @@
       align-items: center;
     }
     
-    .menu-item:hover, .menu-item.active {
-      background-color: rgba(212, 99, 99, 0.1);
+    .menu-item:hover,
+    .menu-item.active {
+      background-color: rgba(233, 121, 121, 0.1);
     }
     
     .menu-item i {
@@ -265,7 +266,8 @@
         padding: 15px 10px;
       }
       
-      .logo h1, .menu-item span {
+      .logo h1, 
+      .menu-item span {
         display: none;
       }
       
@@ -290,19 +292,20 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
+              <a href="index.html" class="link"></a>
                 <h1>242 Perfume </h1>
             </div>
             
             <div class="menu">
 
-                <div  class="menu-item">
+                <div class="menu-item">
                     <a href="dashboard.html" class="menu-link"></a>
                         <i class="fas fa-dashboard"></i>
                         <span>Tổng quan</span>
                 </div>
             
                 <div class="menu-item">
-                    <a href="Order.html" class="menu-link"></a>
+                    <a href="Order.html" class="menu-link active"></a>
                         <i class="fas fa-shopping-cart"></i>
                         <span>Đơn hàng</span>
                 </div>
@@ -331,7 +334,7 @@
                         <span>Cài đặt</span>
                 </div>              
             </div>
-        </div>>
+        </div>
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
@@ -498,12 +501,12 @@
     // Hiển thị đơn hàng ban đầu
     displayOrders(orders);
 
-    document.addEventListener('DOMContentLoaded', function() {
-    // Select all menu items
-    const menuItems = document.querySelectorAll('.menu-item');
+  document.addEventListener('DOMContentLoaded', function() {
+  // Select all menu items
+  const menuItems = document.querySelectorAll('.menu-item');
 
-    // Add click event listener to each menu item
-    menuItems.forEach(item => {
+  // Add click event listener to each menu item
+  menuItems.forEach(item => {
         item.addEventListener('click', function() {
             // Find the link within the clicked menu item
             const link = this.querySelector('a');
@@ -538,6 +541,17 @@
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.querySelector(".logo");
+
+    if (logo) {
+        logo.addEventListener("click", function () {
+            window.location.href = "index.html"; // Chuyển hướng đến trang index.html
+        });
+    }
+});
+
   </script>
 </body>
 </html>
