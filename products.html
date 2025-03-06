@@ -288,6 +288,7 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
+              <a href="index.html"></a>
                 <h1>242 Perfume </h1>
             </div>
             
@@ -539,6 +540,16 @@
             }
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const logo = document.querySelector(".logo");
+
+    if (logo) {
+        logo.addEventListener("click", function () {
+            window.location.href = "index.html"; // Chuyển hướng đến trang index.html
+        });
+    }
 });
   </script>
 </body>
