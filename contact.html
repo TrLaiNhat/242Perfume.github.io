@@ -215,21 +215,6 @@ nav ul li a.active::after {
     box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.1);
 }
 
-.btn-submit {
-    background-color: #bd2155;
-    color: white;
-    border: none;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-submit:hover {
-    background-color: #c6265e;
-    transform: translateY(-2px);
-}
 
 .form-status {
     margin-top: 20px;
@@ -579,53 +564,84 @@ nav ul li a.active::after {
 
 /* Footer styles */
 footer {
-    background-color: #2c2c2c;
-    color: #fff;
-    padding: 60px 0 20px;
-}
-
+        background-color: #333;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+        
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
-
-.footer-logo h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #fff;
+        
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    text-align: left;
+    padding: 0 1rem;
 }
-
-.footer-logo p {
-    color: #bbb;
-}
-
-.footer-links h3,
-.footer-newsletter h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a {
-    color: #bbb;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #de4c6e;
-}
-
-.footer-newsletter p {
-    color: #bbb;
-    margin-bottom: 15px;
-}
-
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: #f3c78e;
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #f3c78e;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            color: #aaa;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #ea6469;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #efef86;
+        }
+        
 .newsletter-form {
     display: flex;
 }
@@ -714,9 +730,12 @@ footer {
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="contact.html" class="active">Liên hệ</a></li>
-                    <li><a href="SignUp_LogIn_Form.html">Tài khoản</a></li>
+                    <li><a href="Trang chủ.html">Trang chủ</a></li>
+                <li><a href="Giới thiệu.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="index.html">Sản phẩm</a></li>
+                <li><a href="Tin tức.html">Tin tức</a></li>
+                <li><a href="SignUp_LogIn_Form.html">Tài khoản</a></li>
                 </ul>
             </nav>
         </div>
@@ -826,35 +845,47 @@ footer {
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>242 Perfume</h2>
-                    <p>Đẳng cấp hương thơm</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Liên Kết Nhanh</h3>
-                    <ul>
-                        <li><a href="index.html">Trang Chủ</a></li>
-                        <li><a href="products.html">Sản Phẩm</a></li>
-                        <li><a href="about.html">Giới Thiệu</a></li>
-                        <li><a href="contact.html">Liên Hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h3>Đăng Ký Nhận Tin</h3>
-                    <p>Nhận thông tin về sản phẩm mới và khuyến mãi</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Email của bạn">
-                        <button type="submit">Đăng Ký</button>
-                    </form>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Chúng tôi tuyển chọn những hương thơm tinh túy nhất từ khắp nơi trên thế giới, mang nghệ thuật nước hoa cao cấp đến với những khách hàng sành điệu.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 242 Perfume. Tất cả quyền được bảo lưu.</p>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Trang chủ.html">Trang chủ</a></li>
+                    <li><a href="Giới thiệu.html">Giới thiệu</a></li>
+                    <li><a href="index.html">Sản phẩm</a></li>
+                    <li><a href="Tin tức.html">Tin tức</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="Chính sách đổi trả.html">Chính sách vận chuyển và đổi trả</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="Chính sách quyền riêng tư.html">Chính sách quyền riêng tư</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates on new arrivals and special promotions.</p>
+                <form>
+                    <input type="email" placeholder="Your email address" style="padding: 8px; width: 100%; margin-bottom: 10px;">
+                    <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                </form>
             </div>
         </div>
+        
+        <div class="copyright">
+            <p>© 2025 Perfumery. All rights reserved.</p>
+        </div>
     </footer>
+
 
     <script>
         // Xử lý form liên hệ
@@ -1221,12 +1252,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 formStatus.style.display = 'block';
             }
         });
-    });
-});
+    }
+
         
         // Hiệu ứng cuộn mượt cho menu
-    const navLinks = document.querySelectorAll('nav a');
-    
-    </script>
+        const navLinks = document.querySelectorAll('nav a');
+    });
+        </script>
 </body>
 </html>
