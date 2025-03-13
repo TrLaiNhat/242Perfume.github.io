@@ -13,7 +13,7 @@
         }
         
         body {
-            background-color: linear-gradient(90deg, #ce0f7e,#c04f75, #e45f7b, #f9fcff);
+            background-color:  linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%);
             color: #333;
         }
         
@@ -250,27 +250,149 @@
             width: 100%;
         }
         
-    
-        
-        .current-price {
-            font-size: 18px;
-            font-weight: bold;
+        .hero {
+            position: relative;
+            height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
         
-        
-        
-        @media (max-width: 768px) {
-            .products {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .background-texture {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%);
+            z-index: 1;
         }
         
-        @media (max-width: 480px) {
-            .products {
-                grid-template-columns: 1fr;
-            }
+        .product-display {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
         }
         
+        .product-display img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .wooden-texture {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 90%;
+            z-index: 2;
+            opacity: 0.9;
+        }
+        
+        .perfume-bottle {
+            position: relative;
+            z-index: 3;
+            height: 80%;
+            max-height: 600px;
+            margin-left: 20px;
+        }
+        
+        .product-info {
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 5;
+        }
+        
+        .product-name {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            color: white;
+        }
+        
+        .product-name:after {
+            content: '          ';
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: #f3c78e;
+            margin: 10px auto;
+        }
+
+        .product-name:hover{
+            color: #e76d6d;
+        }
+
+        .product-name-1 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            color: rgb(23, 6, 6);
+        }
+        .product-name-1:hover {
+            color: #e76d6d;
+        }
+        .product-tagline {
+            font-size: 32px;
+            font-weight: lighter;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            color: white;
+        }
+        .product-tagline-1 {
+            font-size: 32px;
+            font-weight: lighter;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            color: rgb(23, 6, 6);
+        }
+        
+        .discover-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .discover-btn:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 5px;
+            left: 0;
+            background-color: white;
+        }
+        .discover-btn:hover{
+            color: #e76d6d;
+        }
+        .discover-btn-1 {
+            display: inline-block;
+            padding: 8px 20px;
+            border: none;
+            background: transparent;
+            color: rgb(23, 6, 6);
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+        .discover-btn-1:hover{
+            color: #e76d6d;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -388,26 +510,26 @@
             <div class="overlay"></div>
             
             <div class="image-slide active">
-                <img src="images/Dior.jpg" alt="Bois Talisman, Dior">
+                <img src="Images/Dior.jpg" alt="Bois Talisman, Dior">
             </div>
             <div class="image-slide">
-                <img src="images/Chanel.jpeg" alt="Luxury Fragrance Slide 2">
+                <img src="Images/Chanel.jpeg" alt="Luxury Fragrance Slide 2">
             </div>
             <div class="image-slide">
-                <img src="images/Gucci.jpeg" alt="Luxury Fragrance Slide 3">
+                <img src="Images/Gucci.jpeg" alt="Luxury Fragrance Slide 3">
             </div>
             <div class="image-slide">
-                <img src="images/Versace.jpeg" alt="Luxury Fragrance Slide 4">
+                <img src="Images/Versace.jpeg" alt="Luxury Fragrance Slide 4">
             </div>
             <div class="image-slide">
-                <img src="images/Armaf.jpg" alt="Luxury Fragrance Slide 5">
+                <img src="Images/Armaf.jpg" alt="Luxury Fragrance Slide 5">
             </div>
         </div>
         
         <div class="hero-content">
             <h1>Discover Luxury Fragrance Collections</h1>
             <p>Experience the artistry and craftsmanship of the world's most prestigious perfume houses</p>
-            <a href="page1.html" class="btn">Khám phá ngay</a>
+            <a href="index.html" class="btn">Khám phá ngay</a>
         </div>
             
             <div class="navigation-dots">
@@ -419,16 +541,72 @@
             </div>
         </section>
         
-        <section class="featured-brands">
-            <h2>SẢN PHẨM NỔI BẬT</h2>
-            
+        <section class="featured-products">
+            <div class="container">
+                <h1>HÃNG ĐƯỢC ƯA CHUỘNG</h1>
+            </div> 
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="hero">
+                        <div class="background-texture"></div>
+                        <div class="product-display">
+                            <img src="Images/Dior Bois Talisman.jpg" alt="Bois Talisman Perfume" class="perfume-bottle">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-name">Bois Talisman</h2>
+                            <h1 class="product-tagline">An Auspicious Olfactory<br>Silhouette</h1>
+                            <button class="discover-btn">Discover</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="hero">
+                        <div class="background-texture"></div>
+                        <div class="product-display">
+                            <img src="Images/Gucci Collection.avif" alt="Gucci Collection" class="perfume-bottle">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-name">Gucci Collection</h2>
+                            <h1 class="product-tagline">Audacious<br>Artistry</h1>
+                            <button class="discover-btn">Discover</button>
+                        </div>
+                    </div>
+    
+                    <!-- Product 3 -->
+                    <div class="hero">
+                        <div class="background-texture"></div>
+                        <div class="product-display">
+                            <img src="Images/Chanel COCO.webp" alt="Chanel CoCo" class="perfume-bottle">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-name-1">Chanel CoCo</h2>
+                            <h1 class="product-tagline-1">The Essence of<br>Timelessness</h1>
+                            <button class="discover-btn-1">Discover</button>
+                        </div>  
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="hero">
+                        <div class="background-texture"></div>
+                        <div class="product-display">
+                            <img src="images/Tom Ford Collection.jpeg" alt="Tom Ford Collection" class="perfume-bottle">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-name">Tom Ford Collection</h2>
+                            <h1 class="product-tagline">Seduction in Perfection</h1>
+                            <button class="discover-btn">Discover</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <div class="container">
                 <h1>BỘ SƯU TẬP MỚI</h1>
-                
+            </div>  
                 <div class="products">
                     <div class="product">
                         <div class="product-image">
-                            <img src="images/Chanel Coco Mademoiselle L'Eau Privée.jpeg" alt="Nước hoa Chanel Coco Mademoiselle L'Eau Privée">
+                            <img src="images/Chanel Coco Mademoiselle L'Eau Privée.jpeg" alt="Nước Hoa Armaf CLUB DE NUIT">
                         </div>
                         <div class="product-title">
                            Nước hoa Chanel Coco Mademoiselle L'Eau Privée
@@ -441,7 +619,7 @@
                     
                     <div class="product">
                         <div class="product-image">
-                            <img src="images/Dior Sauvage Elixir Intense.jpeg" alt="Nước Hoa Dior Sauvage Elixir Intense">
+                            <img src="images/Dior Sauvage Elixir Intense.jpeg" alt="Nước Hoa Armaf UNIQ EFFECTS">
                         </div>
                         <div class="product-title">
                             Nước Hoa Dior Sauvage Elixir Intense
@@ -453,7 +631,7 @@
                     
                     <div class="product">
                         <div class="product-image">
-                            <img src="images/Gucci Flora Gorgeous Magnolia.jpeg" alt="Nước Hoa Gucci Flora Gorgeous Magnolia">
+                            <img src="images/Gucci Flora Gorgeous Magnolia.jpeg" alt="Nước Hoa Armaf UNIQ OUD FOREVER">
                         </div>
                         <div class="product-title">
                             Nước Hoa Gucci Flora Gorgeous Magnolia
@@ -465,7 +643,7 @@
                     
                     <div class="product">
                         <div class="product-image">
-                            <img src="images/Tom Ford Ébène Fumé Collection.jpeg" alt=" Nước Hoa Tom Ford Ébène Fumé Collection">
+                            <img src="images/Tom Ford Ébène Fumé Collection.jpeg" alt="Nước Hoa MISS ARMAF ATTITUDE">
                         </div>
                         <div class="product-title">
                             Nước Hoa Tom Ford Ébène Fumé Collection
@@ -555,6 +733,9 @@
     // Change slide every 6 seconds
     setInterval(nextSlide, 6000);
 });
+
+
+ 
     </script>
 </body>
 </html>
