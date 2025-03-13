@@ -12,7 +12,7 @@ $searchQuery = isset($_GET['query']) ? trim($_GET['query']) : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả tìm kiếm</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/page.css">
 </head>
 <body>
 
